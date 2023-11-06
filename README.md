@@ -37,7 +37,7 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 
 1. Leaderboard (General and Individual Game)
 2. Trivia API
-3. Speach to text feature for spelling trivia minigame
+3. Speech to text feature for spelling trivia minigame
 
 ### 2. Screen Archetypes
 
