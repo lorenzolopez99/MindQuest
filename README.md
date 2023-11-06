@@ -1,4 +1,4 @@
-# Milestone 1 - APP_NAME_HERE (Unit 7)
+# Milestone 1 - MindQuest (Unit 7)
 
 ## Table of Contents
 
@@ -28,41 +28,42 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 
 **Required Features**
 
-1. [fill in your required user features here]
-2. ...
-3. ...
+1. Mini games (at least 2).
+2. Use log in feature
+3. User stats (for each games)
+
 
 **Optional Features**
 
-1. [fill in your optional user features here]
+1. Leaderboard (General and Individual Game)
 2. ...
 3. ...
 
 ### 2. Screen Archetypes
 
-- [list first screen here]
-  - [list associated required story here]
-  - ...
-- [list second screen here]
-  - [list associated required story here]
-  - ...
+- Home Screen
+  - Naviguate through mini games
+  - Log in/Sign up
+- Mini Game page
+  - Stats about mini game (using fragment)
+  - General Leaderboard for the game. 
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Mini game tab
+* stats tab (for the mini game)
+* leaderboard tab 
 
 **Flow Navigation** (Screen to Screen)
 
-- [list first screen here]
-  - [list screen navigation here]
-  - ...
-- [list second screen here]
-  - [list screen navigation here]
-  - ...
+-Home
+  - Game 1,2,3,4
+  - Log in/Sign up 
+- Game 1,2,3,4
+  - Back to Home
+  - (fragment navigation as described above)
 
 ## Wireframes
 
