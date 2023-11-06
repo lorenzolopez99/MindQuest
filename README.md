@@ -74,6 +74,7 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 <br>
 
 ### [BONUS] Digital Wireframes & Mockups
+![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/aea1fdf3-9ab5-4f77-a2a6-ca93e633fa37)
 
 ### [BONUS] Interactive Prototype
 
