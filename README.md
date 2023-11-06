@@ -77,6 +77,7 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 ![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/aea1fdf3-9ab5-4f77-a2a6-ca93e633fa37)
 
 ### [BONUS] Interactive Prototype
+![projectGif](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/fba12b14-6e18-4be6-837e-e64473bffe57)
 
 <br>
 
