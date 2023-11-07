@@ -15,12 +15,12 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 ### App Evaluation
 
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category: Mobile games**
+- **Mobile: : this app would allow user to play different mini games, which would include different type of gameplay, which could help reach a bigger audience. **
+- **Story: This app would be valuable for our audience because it creates a sense of competitivness amongst players and allow each user to share their score for each of the games. **
+- **Market: Mobile app games represent roughly 13% of the play store, which makes it a valuable category. We are confident that people will try our game and keep playing as new users comes in and break their previous record. We will try to reach different type of people with different themes for each games. For example one game could test reaction time while another could be a trivia game**
+- **Habit: As previously mentioned we believe that this app will be addictive as it will push each user to compete with others for the first place one the leaderboard. Users will also be able to share their score with their friends. **
+- **Scope: Our app will be using a remote database to store all of the user data which will be the most complex task by far. Our app will also include different minigames which will yield different challenge for us (each mini games will be different, so will be their implementation). **
 
 ## Product Spec
 
