@@ -67,7 +67,8 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section] ![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/d95427fa-0865-4673-8470-ce7b25a9ff95)
+[Add picture of your hand sketched wireframes in this section] ![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/147557a3-45d6-4117-a027-cea3d086b8d9)
+
 
 
 <br>
