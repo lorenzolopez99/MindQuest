@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         val homeFragment: Fragment = HomeFragment()
         val gameFragment: Fragment = GameFragment()
-        val leaderboardFragment: Fragment = leaderboardFragment()
+        val leaderboardFragment: Fragment = LeaderboardFragment()
 
         bottomNavigationView.setOnItemSelectedListener { item ->
             lateinit var fragment: Fragment
