@@ -1,28 +1,13 @@
 package com.cs388.humanbenchmark
 
-import android.annotation.SuppressLint
-import android.app.Activity
 import android.os.Bundle
-import android.util.Log
-import android.view.MenuItem
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.Glide
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.tasks.Task
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.GoogleAuthProvider
 
 
 class MainActivity : AppCompatActivity() {
@@ -39,16 +24,13 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
-
        // TODO : initiliaze the fragment, create logic behind it.
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
 
-        val homeFragment: Fragment = homeFragment()
-        val gameFragment: Fragment = gameFragment()
+        val homeFragment: Fragment = HomeFragment()
+        val gameFragment: Fragment = GameFragment()
         val leaderboardFragment: Fragment = leaderboardFragment()
 
         bottomNavigationView.setOnItemSelectedListener { item ->
