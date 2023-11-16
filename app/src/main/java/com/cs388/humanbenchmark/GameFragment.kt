@@ -1,6 +1,5 @@
 package com.cs388.humanbenchmark
 
-import ReflexGameActivity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -32,8 +31,8 @@ class GameFragment : Fragment() {
         }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
+//    override fun onDestroyView() {
+//        super.onDestroyView()
+//        _binding = null
+//    }
 }

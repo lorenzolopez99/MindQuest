@@ -1,6 +1,9 @@
+package com.cs388.humanbenchmark
+
 import android.graphics.Color
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +18,7 @@ class ReflexGameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reflex_game)
 
-        textView = findViewById(R.id.textView)
+        textView = findViewById(R.id.tapToStart)
         textView.setOnClickListener {
             if (textView.text == getString(R.string.tap_to_start)) {
                 startGame()
@@ -54,7 +57,7 @@ class ReflexGameActivity : AppCompatActivity() {
         resetGame()
         // Do something with the reaction time (e.g., display it)
         // You can store it in a variable, log it, or display it to the user.
-        println("Reaction Time: $reactionTime milliseconds")
+        Log.e("Reaction Time:", "$reactionTime milliseconds")
     }
 
     private fun getRandomColor(): Int {
