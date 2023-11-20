@@ -32,9 +32,11 @@ class MainActivity : AppCompatActivity() {
         val homeFragment: Fragment = HomeFragment()
         val gameFragment: Fragment = GameFragment()
         val leaderboardFragment: Fragment = LeaderboardFragment()
-
+        lateinit var fragment: Fragment
+        fragment = homeFragment
+        replaceFragment(fragment)
         bottomNavigationView.setOnItemSelectedListener { item ->
-            lateinit var fragment: Fragment
+
             when (item.itemId) {
                 R.id.action_home -> fragment = homeFragment
                 R.id.action_games -> fragment = gameFragment
