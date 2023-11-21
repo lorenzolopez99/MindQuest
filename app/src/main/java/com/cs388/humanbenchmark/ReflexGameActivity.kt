@@ -13,6 +13,7 @@ class ReflexGameActivity : AppCompatActivity() {
 
     private lateinit var textView: TextView
     private var startTime: Long = 0
+    private var isGameRunning: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,9 +21,11 @@ class ReflexGameActivity : AppCompatActivity() {
 
         textView = findViewById(R.id.tapToStart)
         textView.setOnClickListener {
-            if (textView.text == getString(R.string.tap_to_start)) {
+            if (!isGameRunning) {
                 startGame()
-            } else {
+            } else if (textView.text == getString(R.string.tap_when_red)) {
+                endGameTooEarly()
+            } else if (textView.text == getString(R.string.tap_when_green)) {
                 endGame()
             }
         }
@@ -30,40 +33,66 @@ class ReflexGameActivity : AppCompatActivity() {
 
     private fun startGame() {
         // Change text and background color
-        textView.text = getString(R.string.tap_when_white)
-        textView.setBackgroundColor(getRandomColor())
+        textView.text = getString(R.string.tap_when_red)
+        textView.setBackgroundColor(Color.RED)
+        isGameRunning = true
 
-        // Record the start time
-        startTime = System.currentTimeMillis()
-
-        // Set a timer to reset the color after a random time
+        // Set a timer to turn the screen green after a random time
         object : CountDownTimer((1000 + Math.random() * 3000).toLong(), 100) {
             override fun onTick(millisUntilFinished: Long) {}
 
             override fun onFinish() {
-                resetGame()
-            }
+                if (isGameRunning) {
+                    turnScreenGreen()
+                }            }
         }.start()
+    }
+
+    private fun turnScreenGreen() {
+        textView.text = getString(R.string.tap_when_green)
+        textView.setBackgroundColor(Color.GREEN)
+        startTime = System.currentTimeMillis()
+
+        textView.setOnClickListener {
+            if (isGameRunning && textView.text == getString(R.string.tap_when_green)) {
+                endGame()
+            } else if (isGameRunning && textView.text == getString(R.string.tap_when_red)) {
+                endGameTooEarly()
+            }
+        }
+
+    }
+
+    private fun endGame() {
+        // Check if the screen is green before processing
+        if (isGameRunning && textView.text == getString(R.string.tap_when_green)) {
+            // Record the reaction time
+            val reactionTime = System.currentTimeMillis() - startTime
+            textView.postDelayed({
+                resetGame()
+            }, 1000)
+//            resetGame()
+            // Display the reaction time
+            textView.text = getString(R.string.reaction_time, reactionTime)
+        }
+    }
+
+
+
+    private fun endGameTooEarly() {
+        // Player clicked too early
+        textView.text = getString(R.string.clicked_too_early)
+        textView.setBackgroundColor(Color.RED)
+        isGameRunning = false
+
+        textView.postDelayed({
+            resetGame()
+        }, 1000)
     }
 
     private fun resetGame() {
         textView.text = getString(R.string.tap_to_start)
         textView.setBackgroundColor(Color.WHITE)
-    }
-
-    private fun endGame() {
-        // Record the reaction time
-        val reactionTime = System.currentTimeMillis() - startTime
-        resetGame()
-        // Do something with the reaction time (e.g., display it)
-        // You can store it in a variable, log it, or display it to the user.
-        Log.e("Reaction Time:", "$reactionTime milliseconds")
-    }
-
-    private fun getRandomColor(): Int {
-        val colors = arrayOf(
-            Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, Color.CYAN, Color.MAGENTA
-        )
-        return colors.random()
+        isGameRunning = false
     }
 }
