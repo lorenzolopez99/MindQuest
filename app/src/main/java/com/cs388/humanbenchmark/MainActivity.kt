@@ -29,16 +29,16 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
 
-        val homeFragment: Fragment = HomeFragment()
+        val profileFragment: Fragment = ProfileFragment()
         val gameFragment: Fragment = GameFragment()
         val leaderboardFragment: Fragment = LeaderboardFragment()
         lateinit var fragment: Fragment
-        fragment = homeFragment
+        fragment = gameFragment
         replaceFragment(fragment)
         bottomNavigationView.setOnItemSelectedListener { item ->
 
             when (item.itemId) {
-                R.id.action_home -> fragment = homeFragment
+                R.id.action_profile -> fragment = profileFragment
                 R.id.action_games -> fragment = gameFragment
                R.id.action_leaderboard -> fragment = leaderboardFragment
             }

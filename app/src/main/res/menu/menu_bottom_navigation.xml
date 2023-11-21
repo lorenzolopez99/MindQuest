@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/action_home"
-        android:enabled="true"
-        android:icon="@drawable/baseline_home_24"
-        android:title="Home"
-        app:showAsAction="ifRoom" />
+
     <item
         android:id="@+id/action_games"
         android:enabled="true"
@@ -18,5 +13,11 @@
         android:enabled="true"
         android:icon="@drawable/baseline_leaderboard_24"
         android:title="Leadeboard"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_profile"
+        android:enabled="true"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:title="Profile"
         app:showAsAction="ifRoom" />
 </menu>
