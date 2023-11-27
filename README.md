@@ -99,6 +99,7 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 ## Issues worked on this sprint
 
 - List the issues you completed this sprint
+  ![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/33474625/ea5c4c8a-d99f-451f-ad64-c95241118cd1)
 - [Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.]
 
   ![projectGifsprint1](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/18ffae02-a3e5-40c5-b40d-cd742e21e181)
