@@ -87,8 +87,8 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 
 ## GitHub Project board
 
-[Add screenshot of your Project Board with three milestones visible in
-this section]
+![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/33474625/7c79c6a6-eea2-4aeb-a6e5-82958173ca3b)
+
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ## Issue cards
