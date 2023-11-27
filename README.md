@@ -116,7 +116,9 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 from the original requirements
 
 [Add video/gif of your current application that shows build progress]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+![projectGif](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/27c30088-1861-4739-9a29-a1272e581934)
+
+
 
 ## App Demo Video
 
