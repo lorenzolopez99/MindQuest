@@ -116,7 +116,11 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 
 [Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] 
 
-![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/58187990/35bdc72d-1193-476b-84c5-65d6dad788ce)
+![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/58187990/14292d2b-ba39-460f-9b33-c932f8122d2e)
+
+
+![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/58187990/62d1b149-d8d6-493f-87ca-b7e4369eb9d1)
+
 
 
 ## Completed user stories
