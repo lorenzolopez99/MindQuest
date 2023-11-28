@@ -124,6 +124,9 @@ from the original requirements
 
 [Add video/gif of your current application that shows build progress]
 ![projectGif](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/27c30088-1861-4739-9a29-a1272e581934)
+This Gif showcases the backend work (nosql database connected to firebase) as a proof of concept before we integrate it into our app. 
+![mindquest](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/ad782c7e-1f33-423c-b59d-f05437ccd87c)
+
 
 
 
