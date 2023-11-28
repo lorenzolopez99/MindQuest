@@ -114,7 +114,10 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 
 ## GitHub Project board
 
-[Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+[Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] 
+
+![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/58187990/35bdc72d-1193-476b-84c5-65d6dad788ce)
+
 
 ## Completed user stories
 
@@ -129,8 +132,11 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 
 
 [Add video/gif of your current application that shows build progress]
+
 ![projectGif](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/27c30088-1861-4739-9a29-a1272e581934)
+
 This Gif showcases the backend work (nosql database connected to firebase) as a proof of concept before we integrate it into our app. 
+
 ![mindquest](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/ad782c7e-1f33-423c-b59d-f05437ccd87c)
 
 
