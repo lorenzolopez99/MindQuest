@@ -118,9 +118,15 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 
 ## Completed user stories
 
-- List the completed user stories from this unit
-- List any pending user stories / any user stories you decided to cut
-from the original requirements
+- List the completed user stories from this unit:
+- Re design framgment navigation.
+- User will land on game as a default fragment from where they will be able to click on the game and play it.
+- User can choose to view the leaderboard fragment
+- User can choose to view the profile fragment
+- List any pending user stories / any user stories you decided to cut from the original requirements:
+- User should be able to navigate to the leaderboard fragment and see a leaderboard for each game
+- User should be able to go to its profile fragment and see its personnalized profile (game achieved)
+
 
 [Add video/gif of your current application that shows build progress]
 ![projectGif](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/27c30088-1861-4739-9a29-a1272e581934)
