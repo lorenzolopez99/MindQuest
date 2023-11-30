@@ -8,16 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 class LeaderboardAdapter(private val players: List<Player>): RecyclerView.Adapter<LeaderboardAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val playerNameView: TextView
-        val gameNameView: TextView
-        val gameScoreView: TextView
-
-
-        init {
-            playerNameView = itemView.findViewById(R.id.playerName)
-            gameNameView = itemView.findViewById(R.id.gameName)
-            gameScoreView = itemView.findViewById(R.id.gameScore)
-        }
+        val playerNameView: TextView = itemView.findViewById(R.id.playerName)
+        val gameNameView: TextView = itemView.findViewById(R.id.gameName)
+        val gameScoreView: TextView = itemView.findViewById(R.id.gameScore)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -32,7 +25,7 @@ return players.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-val player = players.get(position)
+        val player = players.get(position)
 
         holder.playerNameView.text = player.username
         holder.gameNameView.text = player.game

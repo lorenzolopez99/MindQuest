@@ -9,30 +9,32 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-lateinit var players: List<Player>
+
 
 class LeaderboardFragment : Fragment() {
+    lateinit var players: List<Player>
+    lateinit var leaderboardRv: RecyclerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-        val leaderboardRv = view?.findViewById<RecyclerView>(R.id.leaderBoardGame)
         players = PlayerScoreFetcher.getScores()
-        val adapter = LeaderboardAdapter(players)
-        if (leaderboardRv != null) {
-            leaderboardRv.adapter = adapter
-        }
-        if (leaderboardRv != null) {
-            leaderboardRv.layoutManager = LinearLayoutManager(context)
-        }
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_leaderboard, container, false)
-
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        leaderboardRv = view.findViewById(R.id.leaderBoardGame)
+        val adapter = LeaderboardAdapter(players)
+
+        leaderboardRv.adapter = adapter
+        leaderboardRv.layoutManager = LinearLayoutManager(context)
+    }
 }
