@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
         fragment = gameFragment
         replaceFragment(fragment)
         bottomNavigationView.setOnItemSelectedListener { item ->
-
             when (item.itemId) {
                 R.id.action_profile -> fragment = profileFragment
                 R.id.action_games -> fragment = gameFragment
