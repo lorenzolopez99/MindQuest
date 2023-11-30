@@ -11,27 +11,32 @@ class PlayerScoreFetcher {
 
         val score = 123456
 
-    }
+        fun getScores(): MutableList<Player> {
+            var players: MutableList<Player> = ArrayList()
+            for (i in 0..9) {
+                val player = Player(username[i], game, score)
+                players.add(player)
 
-    fun getScores(): MutableList<Player> {
-        var players: MutableList<Player> = ArrayList()
-        for (i in 0..9) {
-            val player = Player(username[i], game, score)
-            players.add(player)
+            }
+            return players
+        }
+
+        fun getNext5Scores(): MutableList<Player> {
+            var newPlayers : MutableList<Player> = ArrayList()
+            for (i in 10..14){
+                val player = Player(username[i], game, score)
+                newPlayers.add(player)
+            }
+            return newPlayers
 
         }
-        return players
-    }
 
-    fun getNext5Scores(): MutableList<Player> {
-        var newPlayers : MutableList<Player> = ArrayList()
-        for (i in 10..14){
-            val player = Player(username[i], game, score)
-            newPlayers.add(player)
-        }
-        return newPlayers
 
     }
+
+
+
+
 
 
 
