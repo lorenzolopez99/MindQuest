@@ -29,6 +29,11 @@ class GameFragment : Fragment() {
             val intent = Intent(activity, ReflexGameActivity::class.java)
             startActivity(intent)
         }
+
+        binding.SequenceGameStart.setOnClickListener {
+            val intent = Intent(activity, SequenceGameActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 //    override fun onDestroyView() {

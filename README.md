@@ -87,19 +87,26 @@ Mini Game apps focused on very simple games for user to play. The app will provi
 
 ## GitHub Project board
 
-[Add screenshot of your Project Board with three milestones visible in
-this section]
+![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/33474625/7c79c6a6-eea2-4aeb-a6e5-82958173ca3b)
+
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ## Issue cards
 
-- [Add screenshot of your Project Board with the issues that you've been working on for this unit's milestone] <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
-- [Add screenshot of your Project Board with the issues that you're working on in the **NEXT sprint**. It should include issues for next unit with assigned owners.] <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/33474625/178c23ae-c16b-4f15-a4f7-31c0c087dae7)
+
+![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/33474625/e3219dbc-7957-4db1-b2d4-92f58c31ed3c)
 
 ## Issues worked on this sprint
 
 - List the issues you completed this sprint
+
+  ![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/33474625/ea5c4c8a-d99f-451f-ad64-c95241118cd1)
+
 - [Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.]
+
+  ![projectGifsprint1](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/18ffae02-a3e5-40c5-b40d-cd742e21e181)
+
 
 <br>
 
@@ -107,16 +114,37 @@ this section]
 
 ## GitHub Project board
 
-[Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+[Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] 
+
+![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/58187990/14292d2b-ba39-460f-9b33-c932f8122d2e)
+
+
+![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/58187990/62d1b149-d8d6-493f-87ca-b7e4369eb9d1)
+
+
 
 ## Completed user stories
 
-- List the completed user stories from this unit
-- List any pending user stories / any user stories you decided to cut
-from the original requirements
+- List the completed user stories from this unit:
+- Re design framgment navigation.
+- User will land on game as a default fragment from where they will be able to click on the game and play it.
+- User can choose to view the leaderboard fragment
+- User can choose to view the profile fragment
+- List any pending user stories / any user stories you decided to cut from the original requirements:
+- User should be able to navigate to the leaderboard fragment and see a leaderboard for each game
+- User should be able to go to its profile fragment and see its personnalized profile (game achieved)
+
 
 [Add video/gif of your current application that shows build progress]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+![projectGif](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/27c30088-1861-4739-9a29-a1272e581934)
+
+This Gif showcases the backend work (nosql database connected to firebase) as a proof of concept before we integrate it into our app. 
+
+![mindquest](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/ad782c7e-1f33-423c-b59d-f05437ccd87c)
+
+
+
 
 ## App Demo Video
 
