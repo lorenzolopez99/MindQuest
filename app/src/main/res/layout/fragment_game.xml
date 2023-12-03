@@ -7,25 +7,50 @@
 
     <Button
         android:id="@+id/ReflexGameStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ReflexGame"
+        android:layout_width="166dp"
+        android:layout_height="171dp"
+        android:text="Reflex"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286" />
+        app:layout_constraintVertical_bias="0.307" />
+
+    <Button
+        android:id="@+id/reflexGameStart"
+        android:layout_width="166dp"
+        android:layout_height="171dp"
+        android:text="Fourth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ReflexGameStart"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <Button
+        android:id="@+id/reflexGameStart2"
+        android:layout_width="166dp"
+        android:layout_height="171dp"
+        android:text="Aim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toEndOf="@+id/reflexGameStart"
+        app:layout_constraintTop_toBottomOf="@+id/SequenceGameStart"
+        app:layout_constraintVertical_bias="0.133" />
 
     <Button
         android:id="@+id/SequenceGameStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SequenceGame"
+        android:layout_width="158dp"
+        android:layout_height="171dp"
+        android:text="Sequence"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ReflexGameStart"
-        app:layout_constraintVertical_bias="0.284" />
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toEndOf="@+id/ReflexGameStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
