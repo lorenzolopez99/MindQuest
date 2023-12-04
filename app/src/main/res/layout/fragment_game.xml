@@ -5,22 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/fancyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="#ecf0f1"
+        android:elevation="4dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:padding="16dp"
+        android:text="Test Your Mind"
+        android:textAllCaps="true"
+        android:textColor="#3498db"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ReflexGameStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/ReflexGameStart"
-        android:layout_width="166dp"
-        android:layout_height="171dp"
-        android:text="Reflex"
+        android:layout_width="112dp"
+        android:layout_height="118dp"
+        android:background="@drawable/baseline_speed_24"
+        android:tint="@android:color/holo_blue_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintHorizontal_bias="0.227"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307" />
+        app:layout_constraintVertical_bias="0.43" />
 
     <Button
         android:id="@+id/reflexGameStart"
         android:layout_width="166dp"
-        android:layout_height="171dp"
+        android:layout_height="150dp"
         android:text="Fourth"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +54,7 @@
     <Button
         android:id="@+id/reflexGameStart2"
         android:layout_width="166dp"
-        android:layout_height="171dp"
+        android:layout_height="150dp"
         android:text="Aim"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,13 +66,13 @@
     <Button
         android:id="@+id/SequenceGameStart"
         android:layout_width="158dp"
-        android:layout_height="171dp"
+        android:layout_height="150dp"
         android:text="Sequence"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.358"
         app:layout_constraintStart_toEndOf="@+id/ReflexGameStart"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307" />
+        app:layout_constraintVertical_bias="0.414" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
