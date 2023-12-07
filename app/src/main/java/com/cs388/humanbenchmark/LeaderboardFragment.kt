@@ -35,6 +35,10 @@ class LeaderboardFragment : Fragment() {
         val adapter = LeaderboardAdapter(players)
 
         leaderboardRv.adapter = adapter
-        leaderboardRv.layoutManager = LinearLayoutManager(context)
+        leaderboardRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        //         create a horizontal recyclerview. Populate first layer (horizontal recycler) with an array
+        //          of recyclerview objects.
+        // sample code for horizontal layout :
+        //         leaderboardRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
     }
 }
