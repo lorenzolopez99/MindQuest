@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.331" />
 
     <TextView
-        android:id="@+id/aim_trainer_score_text"
+        android:id="@+id/aim_trainer_target_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Targets: 30"
@@ -33,6 +33,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.069" />
+
+    <TextView
+        android:id="@+id/aim_trainer_score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/aim_start_game_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aim_trainer_game_title" />
 
     <Button
         android:id="@+id/aim_start_game_button"
@@ -54,7 +66,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aim_trainer_score_text"
+        app:layout_constraintTop_toBottomOf="@+id/aim_trainer_target_text"
         app:layout_constraintVertical_bias="1.0" >
 
         <ImageView
