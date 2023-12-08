@@ -1,7 +1,7 @@
 package com.cs388.humanbenchmark
 
 import android.os.Bundle
-import android.view.Gravity
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
@@ -9,10 +9,16 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.FrameLayout.LayoutParams
+import java.lang.Math.floor
 
 class AimTrainerGameActivity : AppCompatActivity() {
+    var positions = mutableListOf<Pair<Int, Int>>()
     var gameTargets: Int = 30
     var gamePlaying: Boolean = false
+    var layoutParams = LayoutParams(
+        LayoutParams.WRAP_CONTENT,
+        LayoutParams.WRAP_CONTENT
+    )
 
     lateinit var startGameButton: Button
     lateinit var titleText: TextView
@@ -33,6 +39,10 @@ class AimTrainerGameActivity : AppCompatActivity() {
         startGameButton.setOnClickListener {
             startGame()
         }
+
+        targetView.setOnClickListener {
+            targetHit(targetView.id)
+        }
     }
 
     fun startGame() {
@@ -41,21 +51,29 @@ class AimTrainerGameActivity : AppCompatActivity() {
         titleText.visibility = View.INVISIBLE
         scoreText.visibility = View.VISIBLE
         gameContent.visibility = View.VISIBLE
-        createPositions()
+        Log.d("positions", "positions created = $positions")
+        newTarget()
+    }
+
+    fun newTarget() {
+        layoutParams.setMargins(floor(Math.random() * 800).toInt(), floor(Math.random() * 1300).toInt(), 0, 0)
+        targetView.setLayoutParams(layoutParams)
+    }
+    fun targetHit(id: Int) {
+        if (!gamePlaying)
+            return
+        if (gameTargets == 0)
+            gameOver()
+
+        Log.d("target id", "target id = $id")
+        if (gameTargets != 0) {
+            gameTargets--
+            scoreText.text = "Targets: ${gameTargets}"
+            newTarget()
+        }
     }
 
     fun gameOver() {
 
-    }
-
-    fun createPositions() {
-        var layoutParams = FrameLayout.LayoutParams(
-            LayoutParams.WRAP_CONTENT,
-            LayoutParams.WRAP_CONTENT
-        )
-        layoutParams.gravity = Gravity.TOP or Gravity.START;
-        layoutParams.setMargins(50, 100, 0, 0)
-
-        targetView.setLayoutParams(layoutParams)
     }
 }
