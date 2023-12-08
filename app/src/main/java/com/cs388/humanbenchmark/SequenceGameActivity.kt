@@ -41,7 +41,7 @@ class SequenceGameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sequence_game_activity)
 
-        startGameButton = findViewById(R.id.start_game_button)
+        startGameButton = findViewById(R.id.sequence_start_game_button)
         llContent = findViewById(R.id.sequence_game_content)
         levelText = findViewById(R.id.level_text)
         titleText = findViewById(R.id.sequence_game_title)
