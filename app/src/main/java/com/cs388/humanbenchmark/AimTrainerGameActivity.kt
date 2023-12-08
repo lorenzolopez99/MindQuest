@@ -59,6 +59,7 @@ class AimTrainerGameActivity : AppCompatActivity() {
     }
 
     private fun newTarget() {
+        startTime = System.currentTimeMillis()
         layoutParams.setMargins(kotlin.math.floor(Math.random() * 800).toInt(), kotlin.math.floor(
             Math.random() * 1300
         ).toInt(), 0, 0)
@@ -82,7 +83,7 @@ class AimTrainerGameActivity : AppCompatActivity() {
 
     private fun gameOver() {
         Log.d("score", "Your score! ${averageTime/30}")
-        scoreText.text = "Average Time: ${averageTime/30}"
+        scoreText.text = "Average Time Between Targets: ${averageTime/30} ms."
         gameTargets = 30
         averageTime = 0
         gamePlaying = false
