@@ -1,5 +1,6 @@
 package com.cs388.humanbenchmark
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -13,7 +14,9 @@ import kotlin.concurrent.schedule
 import kotlin.math.floor
 
 class SequenceGameActivity : AppCompatActivity() {
-    var pattern: MutableList<Int> = mutableListOf<Int>()
+    var pattern: MutableList<Int> = mutableListOf()
+    var colors = listOf(R.color.dark_green, R.color.dark_white, R.color.light_black, R.color.red1, R.color.shrek)
+    var colorsPattern: MutableList<Int> = mutableListOf()
     var gameLevel: Int = 0
     var gamePlaying: Boolean = false
     var cluePlaying: Boolean = false
@@ -50,13 +53,15 @@ class SequenceGameActivity : AppCompatActivity() {
             titleText.visibility = View.INVISIBLE
             scoreText.visibility = View.GONE
             createGrid()
-            createPattern()
+            createSequencePattern()
+            createColorPattern()
             startGame()
         }
     }
 
     fun startGame() {
-        Log.d("pattern", "pattern created = $pattern")
+        Log.d("sequence pattern", "pattern created = $pattern")
+        Log.d("color pattern", "color pattern created = $colorsPattern")
         gamePlaying = true
 
         playClueSequence()
@@ -74,7 +79,7 @@ class SequenceGameActivity : AppCompatActivity() {
             val button: Button = findViewById(pattern[i])
             Timer().schedule(delay) {
                 button.backgroundTintList =
-                    ContextCompat.getColorStateList(button.context, R.color.white)
+                    ContextCompat.getColorStateList(button.context, colors[colorsPattern[i]])
                 Timer().schedule(clueHoldTime.toLong()) {
                     button.backgroundTintList =
                         ContextCompat.getColorStateList(button.context, R.color.light_blue)
@@ -147,9 +152,15 @@ class SequenceGameActivity : AppCompatActivity() {
     }
 
     // function to create sequence pattern
-    fun createPattern() {
+    fun createSequencePattern() {
         for (i in 0..200) {
             pattern.add(floor(Math.random() * 8).toInt())
+        }
+    }
+
+    fun createColorPattern() {
+        for (i in 0..200) {
+            colorsPattern.add(floor(Math.random() * 5).toInt())
         }
     }
 }
