@@ -50,8 +50,11 @@ class AimTrainerGameActivity : AppCompatActivity() {
 
     private fun startGame() {
         gamePlaying = true
+        gameTargets = 30
+        targetText.text = "Targets: $gameTargets"
         startGameButton.visibility = View.GONE
         titleText.visibility = View.GONE
+        scoreText.visibility = View.GONE
         targetText.visibility = View.VISIBLE
         gameContent.visibility = View.VISIBLE
         Log.d("positions", "positions created = $positions")
@@ -68,11 +71,11 @@ class AimTrainerGameActivity : AppCompatActivity() {
     private fun targetHit(id: Int) {
         if (!gamePlaying)
             return
-        if (gameTargets == 0)
+        if (gameTargets == 1)
             gameOver()
 
         Log.d("target id", "target id = $id")
-        if (gameTargets != 0) {
+        if (gameTargets != 1) {
             Log.d("time elapsed", "${System.currentTimeMillis() - startTime}")
             averageTime += System.currentTimeMillis() - startTime
             gameTargets--
@@ -84,11 +87,8 @@ class AimTrainerGameActivity : AppCompatActivity() {
     private fun gameOver() {
         Log.d("score", "Your score! ${averageTime/30}")
         scoreText.text = "Average Time Between Targets: ${averageTime/30} ms."
-        gameTargets = 30
         averageTime = 0
         gamePlaying = false
-        gameContent.removeAllViews()
-        targetText.text = "Targets: 30"
         targetText.visibility = View.GONE
         gameContent.visibility = View.GONE
         titleText.visibility = View.VISIBLE
