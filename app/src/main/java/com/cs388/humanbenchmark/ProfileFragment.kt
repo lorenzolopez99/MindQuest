@@ -28,7 +28,7 @@ class ProfileFragment : Fragment() {
     private lateinit var googleSignInClient: GoogleSignInClient
     private var currentUser: GoogleSignInAccount? = null
 
-    private var seen = false
+    private var signedIn = false
     //private val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,8 +43,8 @@ class ProfileFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
-        var signedIn = false
-        if(!seen ){
+
+        if(!signedIn ){
 
             auth = FirebaseAuth.getInstance()
 
@@ -66,7 +66,7 @@ class ProfileFragment : Fragment() {
                     signInGoogle()
                     view?.findViewById<Button>(R.id.signInBtn)?.text = "Sign Out"
                     signedIn = true
-                    seen = true
+
 
                 }
                 else {
@@ -75,7 +75,7 @@ class ProfileFragment : Fragment() {
                     view?.findViewById<Button>(R.id.signInBtn)?.text = "Sign In"
             destroyUI()
                     signedIn = false
-                    seen = false
+
 
                 }
             }
