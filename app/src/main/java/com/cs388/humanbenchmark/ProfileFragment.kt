@@ -28,7 +28,7 @@ class ProfileFragment : Fragment() {
     private lateinit var googleSignInClient: GoogleSignInClient
     private var currentUser: GoogleSignInAccount? = null
 
-    private var seen = false
+    private var signedIn = false
     //private val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +44,7 @@ class ProfileFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
-        if(!seen ){
+        if(!signedIn ){
 
             auth = FirebaseAuth.getInstance()
 
@@ -60,11 +60,27 @@ class ProfileFragment : Fragment() {
 
 
             view?.findViewById<Button>(R.id.signInBtn)?.setOnClickListener { // sign in button
-                signInGoogle()
-            }
-            seen = true
+                if(!signedIn){
 
-        }
+
+                    signInGoogle()
+                    view?.findViewById<Button>(R.id.signInBtn)?.text = "Sign Out"
+                    signedIn = true
+
+
+                }
+                else {
+                    auth.signOut()
+                    googleSignInClient.signOut()
+                    view?.findViewById<Button>(R.id.signInBtn)?.text = "Sign In"
+            destroyUI()
+                    signedIn = false
+
+
+                }
+            }
+
+ }
         else{
             currentUser?.let { updateUI(it) }
         }
@@ -118,12 +134,15 @@ class ProfileFragment : Fragment() {
 
 
                 var username = view?.findViewById<TextView>(R.id.username)
-                if (username != null) {
-                    username.text = "Welcome,\n" + account.givenName
-                }
                 var image = requireView().findViewById<ImageView>(R.id.profilePicture)
-                Glide.with(this).load(account.photoUrl).into(image)
 
+                if (username != null) {
+                    username.text = "Welcome: \n" + account.givenName
+                }
+
+                Glide.with(this).load(account.photoUrl).into(image)
+                username?.visibility = View.VISIBLE
+                image?.visibility = View.VISIBLE
 
 
             }
@@ -131,5 +150,14 @@ class ProfileFragment : Fragment() {
                 Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun destroyUI(){
+        var username = view?.findViewById<TextView>(R.id.username)
+
+        var image = requireView().findViewById<ImageView>(R.id.profilePicture)
+        username?.visibility = View.INVISIBLE
+        image?.visibility = View.INVISIBLE
+
     }
 }
