@@ -16,7 +16,7 @@
         android:letterSpacing="0.1"
         android:padding="16dp"
         android:shadowColor="#66000000"
-        android:text="Test Your Mind"
+        android:text="Mind Quest"
         android:textAllCaps="true"
         android:textColor="#01383d"
         android:textSize="30sp"
@@ -25,48 +25,158 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintVertical_bias="0.421" />
 
     <Button
         android:id="@+id/ReflexGameStart"
-        android:layout_width="390dp"
-        android:layout_height="129dp"
-        android:layout_marginBottom="144dp"
-        android:backgroundTint="#f5f5f5"
+        android:layout_width="366dp"
+        android:layout_height="133dp"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#A8DDE6"
         android:shadowColor="#000000"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/SequenceGameStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ReflexImg"
+        android:layout_width="100dp"
+        android:layout_height="91dp"
+        android:src="@drawable/reflex_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/ReflexGameStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ReflexGameStart"
+        app:layout_constraintVertical_bias="0.428"
+        tools:src="@drawable/reflex_icon" />
+
+    <TextView
+        android:id="@+id/ReflexText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reflex"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ReflexGameStart"
+        app:layout_constraintEnd_toStartOf="@+id/ReflexImg"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="@+id/ReflexGameStart"
+        app:layout_constraintTop_toTopOf="@+id/ReflexGameStart"
+        app:layout_constraintVertical_bias="0.268" />
+
+    <TextView
+        android:id="@+id/ReflexDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test your reflex"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/ReflexGameStart"
+        app:layout_constraintEnd_toStartOf="@+id/ReflexImg"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="@+id/ReflexGameStart"
+        app:layout_constraintTop_toTopOf="@+id/ReflexGameStart"
+        app:layout_constraintVertical_bias="0.631" />
 
     <Button
         android:id="@+id/SequenceGameStart"
-        android:layout_width="158dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="52dp"
-        android:text="Sequence"
+        android:layout_width="366dp"
+        android:layout_height="133dp"
+        android:layout_marginBottom="72dp"
+        android:backgroundTint="#FED2A1"
+        android:shadowColor="#000000"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/AimTrainerGameStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/memoryImg"
+        android:layout_width="116dp"
+        android:layout_height="106dp"
+        android:src="@drawable/memory_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/SequenceGameStart"
+        app:layout_constraintEnd_toEndOf="@+id/SequenceGameStart"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="@+id/SequenceGameStart"
+        app:layout_constraintTop_toTopOf="@+id/SequenceGameStart"
+        app:layout_constraintVertical_bias="0.481"
+        tools:src="@drawable/memory_icon" />
+
+    <TextView
+        android:id="@+id/MemoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Memory"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/SequenceGameStart"
+        app:layout_constraintEnd_toStartOf="@+id/memoryImg"
+        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintStart_toStartOf="@+id/SequenceGameStart"
+        app:layout_constraintTop_toTopOf="@+id/SequenceGameStart"
+        app:layout_constraintVertical_bias="0.236" />
+
+    <TextView
+        android:id="@+id/MemoryDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Test your memory"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/SequenceGameStart"
+        app:layout_constraintEnd_toStartOf="@+id/memoryImg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/SequenceGameStart"
+        app:layout_constraintTop_toTopOf="@+id/SequenceGameStart"
+        app:layout_constraintVertical_bias="0.631" />
 
     <Button
         android:id="@+id/AimTrainerGameStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
-        android:text="AimTrainerGame"
+        android:layout_width="366dp"
+        android:layout_height="133dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#029FF4"
+        android:shadowColor="#000000"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="98dp"
-        android:layout_height="93dp"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="151dp"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+    <TextView
+        android:id="@+id/AimText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aim"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/AimTrainerGameStart"
+        app:layout_constraintEnd_toEndOf="@+id/AimTrainerGameStart"
+        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintStart_toStartOf="@+id/AimTrainerGameStart"
+        app:layout_constraintTop_toTopOf="@+id/AimTrainerGameStart"
+        app:layout_constraintVertical_bias="0.215" />
+
+
+    <!--    <ImageButton-->
+<!--        android:id="@+id/imageButton"-->
+<!--        android:layout_width="187dp"-->
+<!--        android:layout_height="240dp"-->
+<!--        android:src="@drawable/reflex_icon"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/ReflexGameStart"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.392"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/ReflexGameStart"-->
+<!--        app:layout_constraintVertical_bias="0.252"-->
+<!--        tools:src="@drawable/reflex_icon"-->
+<!--        tools:srcCompat="@tools:sample/backgrounds/scenic" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
