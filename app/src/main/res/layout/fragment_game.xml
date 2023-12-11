@@ -39,29 +39,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.43" />
 
-    <Button
-        android:id="@+id/reflexGameStart"
-        android:layout_width="166dp"
-        android:layout_height="150dp"
-        android:text="Fourth"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.138"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ReflexGameStart"
-        app:layout_constraintVertical_bias="0.133" />
-
-    <Button
-        android:id="@+id/reflexGameStart2"
-        android:layout_width="166dp"
-        android:layout_height="150dp"
-        android:text="Aim"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
-        app:layout_constraintStart_toEndOf="@+id/reflexGameStart"
-        app:layout_constraintTop_toBottomOf="@+id/SequenceGameStart"
-        app:layout_constraintVertical_bias="0.133" />
 
     <Button
         android:id="@+id/SequenceGameStart"
@@ -74,5 +51,18 @@
         app:layout_constraintStart_toEndOf="@+id/ReflexGameStart"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.414" />
+
+
+    <Button
+        android:id="@+id/AimTrainerGameStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AimTrainerGame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.239"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SequenceGameStart"
+        app:layout_constraintVertical_bias="0.212" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
