@@ -14,14 +14,18 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp"
+        android:layout_marginTop="0dp"
+
         android:background="@color/fui_bgTwitter"
         android:gravity="center_vertical"
 
 
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="18dp"
+
         android:text="Leaderboard"
-        android:textColor="@color/white"
-        android:layout_marginTop="0dp"
+        android:textColor="@color/dark_white"
         android:textSize="24dp"
         android:textStyle="bold"
 
