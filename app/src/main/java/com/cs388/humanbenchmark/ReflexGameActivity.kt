@@ -97,7 +97,7 @@ class ReflexGameActivity : AppCompatActivity() {
 
             textView.postDelayed({
                 resetGame()
-            }, 3000)
+            }, 2000)
         }
     }
 
