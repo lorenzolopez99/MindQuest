@@ -66,21 +66,21 @@ class ProfileFragment : Fragment() {
                     signInGoogle()
                     view?.findViewById<Button>(R.id.signInBtn)?.text = "Sign Out"
                     signedIn = true
+                    seen = true
+
                 }
                 else {
                     auth.signOut()
+                    googleSignInClient.signOut()
                     view?.findViewById<Button>(R.id.signInBtn)?.text = "Sign In"
             destroyUI()
                     signedIn = false
+                    seen = false
+
                 }
             }
 
-
-
-
-            seen = true
-
-        }
+ }
         else{
             currentUser?.let { updateUI(it) }
         }
@@ -135,14 +135,14 @@ class ProfileFragment : Fragment() {
 
                 var username = view?.findViewById<TextView>(R.id.username)
                 var image = requireView().findViewById<ImageView>(R.id.profilePicture)
-                username?.visibility = View.VISIBLE
-                image?.visibility = View.VISIBLE
+
                 if (username != null) {
                     username.text = "Welcome: \n" + account.givenName
                 }
 
                 Glide.with(this).load(account.photoUrl).into(image)
-
+                username?.visibility = View.VISIBLE
+                image?.visibility = View.VISIBLE
 
 
             }
