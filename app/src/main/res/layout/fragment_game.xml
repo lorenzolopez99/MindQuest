@@ -21,37 +21,26 @@
         android:textColor="#01383d"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/ReflexGameStart"
+        app:layout_constraintBottom_toBottomOf="@+id/SequenceGameStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421" />
+        app:layout_constraintVertical_bias="0.084" />
 
     <Button
         android:id="@+id/ReflexGameStart"
         android:layout_width="366dp"
         android:layout_height="133dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="404dp"
         android:backgroundTint="#A8DDE6"
         android:shadowColor="#000000"
         app:cornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/SequenceGameStart"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/ReflexImg"
-        android:layout_width="100dp"
-        android:layout_height="91dp"
-        android:src="@drawable/reflex_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/ReflexGameStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.877"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ReflexGameStart"
-        app:layout_constraintVertical_bias="0.428"
-        tools:src="@drawable/reflex_icon" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783" />
 
     <TextView
         android:id="@+id/ReflexText"
@@ -63,7 +52,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/ReflexGameStart"
         app:layout_constraintEnd_toStartOf="@+id/ReflexImg"
-        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="@+id/ReflexGameStart"
         app:layout_constraintTop_toTopOf="@+id/ReflexGameStart"
         app:layout_constraintVertical_bias="0.268" />
@@ -76,7 +65,7 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/ReflexGameStart"
         app:layout_constraintEnd_toStartOf="@+id/ReflexImg"
-        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="@+id/ReflexGameStart"
         app:layout_constraintTop_toTopOf="@+id/ReflexGameStart"
         app:layout_constraintVertical_bias="0.631" />
@@ -85,14 +74,15 @@
         android:id="@+id/SequenceGameStart"
         android:layout_width="366dp"
         android:layout_height="133dp"
-        android:layout_marginBottom="72dp"
         android:backgroundTint="#FED2A1"
         android:shadowColor="#000000"
         app:cornerRadius="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/AimTrainerGameStart"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.566" />
 
     <ImageView
         android:id="@+id/memoryImg"
@@ -134,35 +124,76 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/SequenceGameStart"
         app:layout_constraintTop_toTopOf="@+id/SequenceGameStart"
-        app:layout_constraintVertical_bias="0.631" />
+        app:layout_constraintVertical_bias="0.622" />
 
     <Button
         android:id="@+id/AimTrainerGameStart"
         android:layout_width="366dp"
         android:layout_height="133dp"
-        android:layout_marginBottom="52dp"
-        android:backgroundTint="#029FF4"
+        android:backgroundTint="#EB8777"
         android:shadowColor="#000000"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866" />
 
     <TextView
-        android:id="@+id/AimText"
+        android:id="@+id/PrecisionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aim"
+        android:text="Precision"
         android:textColor="@color/white"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/AimTrainerGameStart"
         app:layout_constraintEnd_toEndOf="@+id/AimTrainerGameStart"
-        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintHorizontal_bias="0.109"
         app:layout_constraintStart_toStartOf="@+id/AimTrainerGameStart"
         app:layout_constraintTop_toTopOf="@+id/AimTrainerGameStart"
-        app:layout_constraintVertical_bias="0.215" />
+        app:layout_constraintVertical_bias="0.225" />
+
+    <TextView
+        android:id="@+id/PrecisionDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Test your aim"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/AimTrainerGameStart"
+        app:layout_constraintEnd_toEndOf="@+id/AimTrainerGameStart"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/AimTrainerGameStart"
+        app:layout_constraintTop_toTopOf="@+id/AimTrainerGameStart"
+        app:layout_constraintVertical_bias="0.649" />
+
+    <ImageView
+        android:id="@+id/precisionImg"
+        android:layout_width="116dp"
+        android:layout_height="106dp"
+        android:src="@drawable/precision_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/AimTrainerGameStart"
+        app:layout_constraintEnd_toEndOf="@+id/AimTrainerGameStart"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="@+id/AimTrainerGameStart"
+        app:layout_constraintTop_toTopOf="@+id/AimTrainerGameStart"
+        app:layout_constraintVertical_bias="0.444"
+        tools:src="@drawable/precision_icon" />
+
+    <ImageView
+        android:id="@+id/ReflexImg"
+        android:layout_width="100dp"
+        android:layout_height="91dp"
+        android:src="@drawable/reflex_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/ReflexGameStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ReflexGameStart"
+        app:layout_constraintVertical_bias="0.428"
+        tools:src="@drawable/reflex_icon" />
 
 
     <!--    <ImageButton-->
