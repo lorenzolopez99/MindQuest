@@ -43,7 +43,7 @@ class ProfileFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
-
+        var signedIn = false
         if(!seen ){
 
             auth = FirebaseAuth.getInstance()
@@ -60,8 +60,24 @@ class ProfileFragment : Fragment() {
 
 
             view?.findViewById<Button>(R.id.signInBtn)?.setOnClickListener { // sign in button
-                signInGoogle()
+                if(!signedIn){
+
+
+                    signInGoogle()
+                    view?.findViewById<Button>(R.id.signInBtn)?.text = "Sign Out"
+                    signedIn = true
+                }
+                else {
+                    auth.signOut()
+                    view?.findViewById<Button>(R.id.signInBtn)?.text = "Sign In"
+            destroyUI()
+                    signedIn = false
+                }
             }
+
+
+
+
             seen = true
 
         }
@@ -118,10 +134,13 @@ class ProfileFragment : Fragment() {
 
 
                 var username = view?.findViewById<TextView>(R.id.username)
-                if (username != null) {
-                    username.text = "Welcome,\n" + account.givenName
-                }
                 var image = requireView().findViewById<ImageView>(R.id.profilePicture)
+                username?.visibility = View.VISIBLE
+                image?.visibility = View.VISIBLE
+                if (username != null) {
+                    username.text = "Welcome: \n" + account.givenName
+                }
+
                 Glide.with(this).load(account.photoUrl).into(image)
 
 
@@ -131,5 +150,14 @@ class ProfileFragment : Fragment() {
                 Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun destroyUI(){
+        var username = view?.findViewById<TextView>(R.id.username)
+
+        var image = requireView().findViewById<ImageView>(R.id.profilePicture)
+        username?.visibility = View.INVISIBLE
+        image?.visibility = View.INVISIBLE
+
     }
 }
