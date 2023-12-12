@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/fancyTextView"
-        android:layout_width="503dp"
-        android:layout_height="68dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:background="@drawable/background_text_view"
         android:gravity="center"
@@ -23,9 +23,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/ReflexGameStart"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.357" />
+        app:layout_constraintVertical_bias="0.60" />
 
     <Button
         android:id="@+id/ReflexGameStart"
@@ -188,11 +189,11 @@
         android:layout_height="91dp"
         android:src="@drawable/reflex_icon"
         app:layout_constraintBottom_toBottomOf="@+id/ReflexGameStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.877"
+        app:layout_constraintEnd_toEndOf="@+id/ReflexGameStart"
+        app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ReflexGameStart"
-        app:layout_constraintVertical_bias="0.428"
+        app:layout_constraintVertical_bias="0.595"
         tools:src="@drawable/reflex_icon" />
 
 

@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-       // TODO : initiliaze the fragment, create logic behind it.
+       // TODO : initialize the fragment, create logic behind it.
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
