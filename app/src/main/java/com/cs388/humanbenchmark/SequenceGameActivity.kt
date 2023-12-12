@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -25,11 +26,11 @@ class SequenceGameActivity : AppCompatActivity() {
     var nextClueWaitTime: Int = 1000
     var guessCount: Int = 0
 
-    lateinit var startGameButton: Button
+    lateinit var startGameTextView: TextView
     lateinit var llContent: LinearLayout
     lateinit var levelText: TextView
-    lateinit var titleText: TextView
     lateinit var scoreText: TextView
+    lateinit var memoryIconView: ImageView
 
     var newButtonListener = View.OnClickListener {
         Log.d("id", "button id = ${it.id.toString()}")
@@ -41,17 +42,17 @@ class SequenceGameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sequence_game_activity)
 
-        startGameButton = findViewById(R.id.sequence_start_game_button)
+        startGameTextView = findViewById(R.id.sequence_game_start)
         llContent = findViewById(R.id.sequence_game_content)
         levelText = findViewById(R.id.level_text)
-        titleText = findViewById(R.id.sequence_game_title)
         scoreText = findViewById(R.id.score_text)
+        memoryIconView = findViewById(R.id.memory_icon)
 
-        startGameButton.setOnClickListener {
-            startGameButton.visibility = View.INVISIBLE
+        startGameTextView.setOnClickListener {
+            startGameTextView.visibility = View.GONE
             levelText.visibility = View.VISIBLE
-            titleText.visibility = View.INVISIBLE
             scoreText.visibility = View.GONE
+            memoryIconView.visibility = View.GONE
             createGrid()
             createSequencePattern()
             createColorPattern()
@@ -126,8 +127,8 @@ class SequenceGameActivity : AppCompatActivity() {
         levelText.visibility = View.GONE
         llContent.visibility = View.GONE
         scoreText.visibility = View.VISIBLE
-        titleText.visibility = View.VISIBLE
-        startGameButton.visibility = View.VISIBLE
+        startGameTextView.visibility = View.VISIBLE
+        memoryIconView.visibility = View.VISIBLE
     }
 
     // function to create grid for game
