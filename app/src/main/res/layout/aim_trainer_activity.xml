@@ -9,19 +9,6 @@
     android:background="@android:color/holo_blue_light" >
 
     <TextView
-        android:id="@+id/aim_trainer_game_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aim Trainer"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/aim_start_game_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.331" />
-
-    <TextView
         android:id="@+id/aim_trainer_target_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,22 +26,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/aim_start_game_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aim_trainer_game_title" />
-
-    <Button
-        android:id="@+id/aim_start_game_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Game"
+        android:layout_marginTop="600dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.069"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/aim_trainer_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:text="Tap to Start"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <FrameLayout
         android:id="@+id/aim_trainer_game_content"
@@ -78,8 +75,20 @@
             android:maxWidth="100dp"
             android:maxHeight="100dp"
             android:src="@drawable/target" />
-
     </FrameLayout>
+
+    <ImageView
+        android:id="@+id/precision_icon"
+        android:layout_width="234dp"
+        android:layout_height="268dp"
+        android:src="@drawable/precision_icon"
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

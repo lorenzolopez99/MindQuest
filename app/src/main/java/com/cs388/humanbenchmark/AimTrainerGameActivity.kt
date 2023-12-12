@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
@@ -21,25 +20,25 @@ class AimTrainerGameActivity : AppCompatActivity() {
         LayoutParams.WRAP_CONTENT
     )
 
-    private lateinit var startGameButton: Button
-    private lateinit var titleText: TextView
+    private lateinit var startGameTextView: TextView
     private lateinit var targetText: TextView
     private lateinit var scoreText: TextView
     private lateinit var gameContent: FrameLayout
     private lateinit var targetView: ImageView
+    private lateinit var precisionIconView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.aim_trainer_activity)
 
-        startGameButton = findViewById(R.id.aim_start_game_button)
-        titleText = findViewById(R.id.aim_trainer_game_title)
+        startGameTextView = findViewById(R.id.aim_trainer_start)
         targetText = findViewById(R.id.aim_trainer_target_text)
         scoreText = findViewById(R.id.aim_trainer_score_text)
         gameContent = findViewById(R.id.aim_trainer_game_content)
         targetView = findViewById(R.id.target)
+        precisionIconView = findViewById(R.id.precision_icon)
 
-        startGameButton.setOnClickListener {
+        startGameTextView.setOnClickListener {
             startGame()
         }
 
@@ -52,9 +51,9 @@ class AimTrainerGameActivity : AppCompatActivity() {
         gamePlaying = true
         gameTargets = 30
         targetText.text = "Targets: $gameTargets"
-        startGameButton.visibility = View.GONE
-        titleText.visibility = View.GONE
+        startGameTextView.visibility = View.GONE
         scoreText.visibility = View.GONE
+        precisionIconView.visibility = View.GONE
         targetText.visibility = View.VISIBLE
         gameContent.visibility = View.VISIBLE
         Log.d("positions", "positions created = $positions")
@@ -91,8 +90,8 @@ class AimTrainerGameActivity : AppCompatActivity() {
         gamePlaying = false
         targetText.visibility = View.GONE
         gameContent.visibility = View.GONE
-        titleText.visibility = View.VISIBLE
         scoreText.visibility = View.VISIBLE
-        startGameButton.visibility = View.VISIBLE
+        startGameTextView.visibility = View.VISIBLE
+        precisionIconView.visibility = View.VISIBLE
     }
 }
