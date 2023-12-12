@@ -21,7 +21,7 @@ class LeaderboardAdapter(private val players: List<Player>): RecyclerView.Adapte
     }
 
     override fun getItemCount(): Int {
-return players.size
+        return players.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
