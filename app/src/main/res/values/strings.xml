@@ -6,6 +6,7 @@
     <string name="tap_when_red">Tap when screen turns green!</string>
     <string name="reaction_time">Reaction Time: %d milliseconds</string>
     <string name="high_score">High Score: %1$d milliseconds</string>
+    <string name="tap_to_start_with_reaction_time">Tap to Start\nLast reaction time: %1$d ms</string>
 
 
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -25,13 +26,45 @@
 
     <TextView
         android:id="@+id/tapToStart"
-        android:layout_width="383dp"
-        android:layout_height="714dp"
-        android:background="#FFFFFF"
+        android:layout_width="395dp"
+        android:layout_height="715dp"
         android:gravity="center"
+        android:letterSpacing="0.1"
         android:text="@string/tap_to_start"
         android:textColor="@android:color/black"
-        android:textSize="24sp" />
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/reactionTimeTextView"
+        android:layout_width="332dp"
+        android:layout_height="43dp"
+        android:layout_alignStart="@+id/tapToStart"
+        android:layout_alignTop="@+id/tapToStart"
+        android:layout_alignEnd="@+id/tapToStart"
+        android:layout_alignBottom="@+id/tapToStart"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="645dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="12dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:id="@+id/reflexImage"
+        android:layout_width="234dp"
+        android:layout_height="268dp"
+        android:layout_alignStart="@+id/tapToStart"
+        android:layout_alignTop="@+id/tapToStart"
+        android:layout_alignEnd="@+id/tapToStart"
+        android:layout_alignBottom="@+id/tapToStart"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="417dp"
+        android:src="@drawable/reflex_icon" />
 
 
 </RelativeLayout>
