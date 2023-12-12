@@ -13,21 +13,27 @@
     android:layout_height="match_parent"
     >
 
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/background_text_view"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:padding="16dp"
+        android:shadowColor="#66000000"
+        android:text="Mind Quest"
+        android:textAllCaps="true"
+        android:textColor="#01383d"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:text="MindQuest"
-        android:textAlignment="center"
-        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/profilePicture"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.347" />
+        app:layout_constraintVertical_bias="0.60" />
 
     <TextView
         android:id="@+id/username"

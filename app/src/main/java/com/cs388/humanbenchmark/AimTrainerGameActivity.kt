@@ -84,8 +84,9 @@ class AimTrainerGameActivity : AppCompatActivity() {
     }
 
     private fun gameOver() {
+        var finalScore = averageTime/30
         Log.d("score", "Your score! ${averageTime/30}")
-        scoreText.text = "Average Time Between Targets: ${averageTime/30} ms."
+        scoreText.text = "Average Time Between Targets: $finalScore ms."
         averageTime = 0
         gamePlaying = false
         targetText.visibility = View.GONE
