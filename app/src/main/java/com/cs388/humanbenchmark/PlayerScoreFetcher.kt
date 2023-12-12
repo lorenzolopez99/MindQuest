@@ -1,43 +1,35 @@
 package com.cs388.humanbenchmark
-
+import android.util.Log
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.ChildEventListener
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.IgnoreExtraProperties
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 class PlayerScoreFetcher {
+
     companion object {
-        val username = listOf(
-            "USER1", "USER2", "USER3", "USER4", "USER5",
-                    "USER6", "USER7", "USER8", "USER9", "USER10", "USER11",
-            "USER12", "USER13", "USER14", "USER15", "USER16"
-        )
-        val game = "Game1 Example"
 
-        val score = 123456
-
-        fun getScores(): MutableList<Player> {
+        fun getScores(index:String): MutableList<Player> {
+            var database : DatabaseReference = Firebase.database.reference
             var players: MutableList<Player> = ArrayList()
-            for (i in 0..9) {
-                val player = Player(username[i], game, score)
-                players.add(player)
-
+            database.child("leaderboard").child("game$index").get().addOnCompleteListener {
+                if (it.isSuccessful){
+                    val result = it.result.value as Map<String,Int>
+                    for (player in result.keys){
+                        val player = Player(player, "game$index", result[player]!!)
+                        players.add(player)
+                    }
+                    //Log.d("GOON",player["Thibault Chezaud"].toString())
+                }
+                else{
+                    Log.d("GOON",it.exception?.message.toString())
+                }
             }
             return players
         }
-
-        fun getNext5Scores(): MutableList<Player> {
-            var newPlayers : MutableList<Player> = ArrayList()
-            for (i in 10..14){
-                val player = Player(username[i], game, score)
-                newPlayers.add(player)
-            }
-            return newPlayers
-
-        }
-
-
     }
-
-
-
-
-
-
-
 }
