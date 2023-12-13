@@ -1,6 +1,7 @@
 package com.cs388.humanbenchmark
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,7 +22,7 @@ class LeaderboardFragment : Fragment() {
     lateinit var game1Scores: MutableList<Player>
 //    lateinit var game2Scores: List<Player>
 //    lateinit var game3Scores: List<Player>
-    lateinit var verticalDataList: MutableList<List<Player>> // List of data for each vertical RecyclerView
+    lateinit var verticalDataList: Array<MutableList<Player>?> // List of data for each vertical RecyclerView
 
 
     lateinit var database: DatabaseReference
@@ -29,20 +30,10 @@ class LeaderboardFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         database = FirebaseDatabase.getInstance().reference
-        verticalDataList = ArrayList()
+        verticalDataList = arrayOfNulls<MutableList<Player>>(3)
         game1Scores = ArrayList()
 
-//        game1Scores = PlayerScoreFetcher.getScores("1")
-//        game2Scores = PlayerScoreFetcher.getScores("2")
-//        game3Scores = PlayerScoreFetcher.getScores("3")
 
-//        Log.d("game1", "game1 : ${game1Scores} ")
-//        Log.d("game1", "game2 : ${game2Scores} ")
-//
-//        Log.d("game1", "game3 : ${game3Scores} ")
-        // Populate verticalDataList with data for each vertical RecyclerView
-        // You can decide how to split 'players' into three parts, one for each vertical RecyclerView
-        // For example, if players.size = 30, you might want to split it into three lists of 10 players each.
     }
 
     override fun onCreateView(
@@ -66,19 +57,14 @@ class LeaderboardFragment : Fragment() {
 
 
 
-//        val array = FetchArray.getInstance()
-//        verticalDataList = array.getArrays()
-//        game1Scores = PlayerScoreFetcher.getScores("1")
-//        game2Scores = PlayerScoreFetcher.getScores("2")
-//        game3Scores = PlayerScoreFetcher.getScores("3")
 
 
 
 
 
-    getUserData()
-
-
+        getUserData(1)
+        getUserData(2)
+        getUserData(3)
 
 
         //verticalDataList.removeFirst()
@@ -88,31 +74,45 @@ class LeaderboardFragment : Fragment() {
     }
 
 
-    fun getUserData() {
-        val gameCategory = "1" // Change this to the appropriate game index
+    fun getUserData(gameCategory: Int) {
 
-        val dbref = FirebaseDatabase.getInstance().getReference("leaderboard").child("game$gameCategory")
+
+
+        val dbref =
+            FirebaseDatabase.getInstance().getReference("leaderboard").child("game$gameCategory")
+                .orderByValue()
+
 
         dbref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
-                    val players: MutableList<Player> = ArrayList()
+                    var players: MutableList<Player> = ArrayList()
+
 
                     for (userSnapshot in snapshot.children) {
-                        val username = userSnapshot.child("username").getValue(String::class.java)
-                        val score = userSnapshot.child("score").getValue(Int::class.java)
+
+                        Log.d("snapshot", "${userSnapshot.toString()}")
+                        val username = userSnapshot.key
+                        val score = userSnapshot.value.toString().toLong()
+                        Log.d("snapshot", "${username.toString()}")
+                        Log.d("snapshot", "${score.toString()}")
+
 
                         if (username != null && score != null) {
-                            val player = Player(username, "game$gameCategory", 12)
+                            val player = Player(username, "game$gameCategory", score)
                             players.add(player)
                         }
                     }
 
-                    verticalDataList.add(players)
-                    verticalDataList.add(players)
-                    verticalDataList.add(players)
+                    if(gameCategory == 2){
+                       players = players.reversed().toMutableList()
+                    }
+
+                    verticalDataList[gameCategory-1] = players
 
                     leaderboardHz.adapter = LeaderboardHzAdapter(verticalDataList)
+
+
                 }
             }
 
