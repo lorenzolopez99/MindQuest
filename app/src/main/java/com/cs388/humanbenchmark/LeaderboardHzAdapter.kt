@@ -4,11 +4,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class LeaderboardHzAdapter(private val verticalDataList: List<List<Player>>) :
+class LeaderboardHzAdapter(private val verticalDataList: Array<MutableList<Player>?>) :
     RecyclerView.Adapter<LeaderboardHzAdapter.ViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -22,7 +21,9 @@ class LeaderboardHzAdapter(private val verticalDataList: List<List<Player>>) :
     override fun onBindViewHolder(holder: LeaderboardHzAdapter.ViewHolder, position: Int) {
         val verticalData = verticalDataList[position]
         Log.d("position", "$position ${verticalDataList[position]}")
-        holder.bindVerticalData(verticalData)
+        if (verticalData != null) {
+            holder.bindVerticalData(verticalData)
+        }
     }
 
     override fun getItemCount(): Int {

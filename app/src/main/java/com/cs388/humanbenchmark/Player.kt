@@ -1,6 +1,9 @@
 package com.cs388.humanbenchmark
 
-class Player(val username: String, val game: String, val score: Int) {
+data class Player(
+    var username: String? = null,
+    var game: String? = null,
+    var score: Long = 0
+)
 
 
-}
