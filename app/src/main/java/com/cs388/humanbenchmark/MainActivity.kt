@@ -15,10 +15,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var googleSignInClient: GoogleSignInClient
     lateinit var drawerLayout: DrawerLayout
     lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
-    lateinit var verticalDataList1: MutableList<List<Player>>
-    lateinit var game1Scores1: List<Player>
-    lateinit var game2Scores1: List<Player>
-    lateinit var game3Scores1: List<Player>
+//    lateinit var verticalDataList1: MutableList<List<Player>>
+//    lateinit var game1Scores1: List<Player>
+//    lateinit var game2Scores1: List<Player>
+//    lateinit var game3Scores1: List<Player>
 
     //private val TAG = "MainActivity"
 
@@ -29,18 +29,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        game1Scores1 = PlayerScoreFetcher.getScores("1")
-        game2Scores1 = PlayerScoreFetcher.getScores("2")
-        game3Scores1 = PlayerScoreFetcher.getScores("3")
 
-        verticalDataList1 = ArrayList()
-
-
-        verticalDataList1.add(game1Scores1) // game 1 for exmpl
-        verticalDataList1.add(game2Scores1) // game 2
-        verticalDataList1.add(game3Scores1) // game 3
-        val array = FetchArray.getInstance()
-        array.setArrays(verticalDataList1)
+//        val array = FetchArray.getInstance()
+//        array.setArrays(verticalDataList1)
 
 
 
