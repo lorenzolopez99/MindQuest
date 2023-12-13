@@ -1,5 +1,6 @@
 package com.cs388.humanbenchmark
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,7 @@ class LeaderboardHzAdapter(private val verticalDataList: List<List<Player>>) :
 
     override fun onBindViewHolder(holder: LeaderboardHzAdapter.ViewHolder, position: Int) {
         val verticalData = verticalDataList[position]
+        Log.d("position", "$position ${verticalDataList[position]}")
         holder.bindVerticalData(verticalData)
     }
 
