@@ -4,11 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -34,6 +37,7 @@ class SequenceGameActivity : AppCompatActivity() {
     private lateinit var levelText: TextView
     private lateinit var scoreText: TextView
     private lateinit var memoryIconView: ImageView
+    private lateinit var backButton: ImageButton
 
     private var newButtonListener = View.OnClickListener {
         Log.d("id", "button id = ${it.id}")
@@ -50,12 +54,18 @@ class SequenceGameActivity : AppCompatActivity() {
         levelText = findViewById(R.id.level_text)
         scoreText = findViewById(R.id.score_text)
         memoryIconView = findViewById(R.id.memory_icon)
+        backButton = findViewById(R.id.sequence_back)
+
+        backButton.setOnClickListener {
+            Log.e("back button", "pressed!!!!")
+            onBackPressed()
+        }
 
         startGameTextView.setOnClickListener {
             startGameTextView.visibility = View.GONE
             levelText.visibility = View.VISIBLE
             scoreText.visibility = View.GONE
-            memoryIconView.visibility = View.GONE
+            memoryIconView.visibility = View.INVISIBLE
             createGrid()
             createSequencePattern()
             createColorPattern()

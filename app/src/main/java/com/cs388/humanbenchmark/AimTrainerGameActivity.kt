@@ -8,6 +8,7 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.FrameLayout.LayoutParams
+import android.widget.ImageButton
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -30,6 +31,7 @@ class AimTrainerGameActivity : AppCompatActivity() {
     private lateinit var gameContent: FrameLayout
     private lateinit var targetView: ImageView
     private lateinit var precisionIconView: ImageView
+    private lateinit var backButton: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +43,13 @@ class AimTrainerGameActivity : AppCompatActivity() {
         gameContent = findViewById(R.id.aim_trainer_game_content)
         targetView = findViewById(R.id.target)
         precisionIconView = findViewById(R.id.precision_icon)
+
+        backButton = findViewById(R.id.aim_back)
+
+        backButton.setOnClickListener {
+            Log.e("back button", "pressed!!!!")
+            onBackPressed()
+        }
 
         startGameTextView.setOnClickListener {
             startGame()
@@ -57,7 +66,7 @@ class AimTrainerGameActivity : AppCompatActivity() {
         targetText.text = "Targets: $gameTargets"
         startGameTextView.visibility = View.GONE
         scoreText.visibility = View.GONE
-        precisionIconView.visibility = View.GONE
+        precisionIconView.visibility = View.INVISIBLE
         targetText.visibility = View.VISIBLE
         gameContent.visibility = View.VISIBLE
         Log.d("positions", "positions created = $positions")

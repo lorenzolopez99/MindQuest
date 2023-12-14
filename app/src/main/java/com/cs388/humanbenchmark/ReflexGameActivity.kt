@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -28,6 +29,7 @@ class ReflexGameActivity : AppCompatActivity() {
     private val HIGH_SCORE_KEY = "high_score"
     private var lastReactionTime: Long = 0
     private lateinit var reactionTimeTextView: TextView
+    private lateinit var backButton: ImageButton
 
 
 
@@ -42,6 +44,12 @@ class ReflexGameActivity : AppCompatActivity() {
         textView.setBackgroundColor(Color.rgb(227,247,250))
         highScoreTextView.setTextColor(Color.BLACK)
         sharedPreferences = getPreferences(Context.MODE_PRIVATE)
+        backButton = findViewById(R.id.reflex_back)
+
+        backButton.setOnClickListener {
+            Log.e("back button", "pressed!!!!")
+            onBackPressed()
+        }
 
         textView.setOnClickListener {
             if (!isGameRunning && !isGameEnded) {
