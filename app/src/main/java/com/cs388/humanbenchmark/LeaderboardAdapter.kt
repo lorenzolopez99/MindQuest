@@ -25,7 +25,7 @@ class LeaderboardAdapter(private val players: List<Player>): RecyclerView.Adapte
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val player = players.get(position)
+        val player = players[position]
 
         holder.playerNameView.text = player.username
         holder.gameNameView.text = player.game
@@ -33,6 +33,5 @@ class LeaderboardAdapter(private val players: List<Player>): RecyclerView.Adapte
 
         if (position % 2 == 0)
             holder.itemView.setBackgroundResource(R.color.light_grey)
-
     }
 }

@@ -1,11 +1,13 @@
 package com.cs388.humanbenchmark
 
 import android.os.Bundle
+import android.text.Layout
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -55,13 +57,6 @@ class LeaderboardFragment : Fragment() {
         leaderboardHz.adapter = hzAdapter
         leaderboardHz.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-
-
-
-
-
-
-
         getUserData(1)
         getUserData(2)
         getUserData(3)
@@ -109,10 +104,7 @@ class LeaderboardFragment : Fragment() {
                     }
 
                     verticalDataList[gameCategory-1] = players
-
                     leaderboardHz.adapter = LeaderboardHzAdapter(verticalDataList)
-
-
                 }
             }
 

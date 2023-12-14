@@ -4,6 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -38,6 +39,9 @@ class LeaderboardHzAdapter(private val verticalDataList: Array<MutableList<Playe
             verticalRecyclerView.adapter = verticalAdapter
             verticalRecyclerView.layoutManager = LinearLayoutManager(itemView.context)
 
+            val headerAdapter = HeaderAdapter()
+            val concatAdapter = ConcatAdapter(headerAdapter, verticalAdapter)
+            verticalRecyclerView.adapter = concatAdapter
         }
     }
 
