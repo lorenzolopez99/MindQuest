@@ -28,7 +28,7 @@ class LeaderboardAdapter(private val players: List<Player>): RecyclerView.Adapte
         val player = players[position]
 
         holder.playerNameView.text = player.username
-        holder.gameNameView.text = player.game
+        holder.gameNameView.text = "${position+1}"
         holder.gameScoreView.text = player.score.toString()
 
         if (position % 2 == 0)
