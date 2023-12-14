@@ -42,6 +42,7 @@ android {
 
 dependencies {
     implementation ("de.hdodenhof:circleimageview:3.1.0")
+    implementation("androidx.recyclerview:recyclerview:1.2.0")
 
     implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation("androidx.core:core-ktx:1.6.0")
