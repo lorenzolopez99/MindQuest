@@ -39,7 +39,7 @@ class LeaderboardHzAdapter(private val verticalDataList: Array<MutableList<Playe
             verticalRecyclerView.adapter = verticalAdapter
             verticalRecyclerView.layoutManager = LinearLayoutManager(itemView.context)
 
-            val headerAdapter = HeaderAdapter()
+            val headerAdapter = HeaderAdapter(verticalData)
             val concatAdapter = ConcatAdapter(headerAdapter, verticalAdapter)
             verticalRecyclerView.adapter = concatAdapter
         }

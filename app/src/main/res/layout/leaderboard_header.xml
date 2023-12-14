@@ -19,7 +19,7 @@
         android:padding="5dp"
         android:shadowColor="#66000000"
         android:textAllCaps="true"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="20sp"
 
         android:textStyle="bold"
@@ -27,7 +27,7 @@
         app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Game" />
+        tools:text="Reaction Time Leaderboard" />
 
     <TextView
         android:id="@+id/playerText"
