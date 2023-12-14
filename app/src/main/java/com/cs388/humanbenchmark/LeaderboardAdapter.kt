@@ -31,7 +31,8 @@ class LeaderboardAdapter(private val players: List<Player>): RecyclerView.Adapte
         holder.gameNameView.text = player.game
         holder.gameScoreView.text = player.score.toString()
 
-
+        if (position % 2 == 0)
+            holder.itemView.setBackgroundResource(R.color.light_grey)
 
     }
 }
