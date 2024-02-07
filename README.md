@@ -3,15 +3,16 @@
 
 
 ## Outline
+
+### Realtime Database
 ![](gifs/database.gif)
+MindQuest uses FireBase's Realtime Database implementation to dynamically save and display logged-in users' high scores on a leaderboard.
 
 ### Google Login
 ![](gifs/login.gif)
 MindQuest uses FireBase's Google Authentication API, allowing users to login with their Gmail account and save their scores.
 
-### Realtime Database
-![](gifs/database.gif)
-MindQuest uses FireBase's Realtime Database implementation to dynamically save and display logged-in users' high scores on a leaderboard.
+
 
 ### Reflex Game
 ![](gifs/reflexgame.gif)
