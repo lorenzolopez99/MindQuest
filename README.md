@@ -9,10 +9,10 @@
 ## Overview
 MindQuest is a "human benchmark" Android app, with minigames that test the user's reaction time, memory, and hand-eye coordination. MindQuest uses a FireBase backend, allowing users to securely login via Gmail and dynamically save and store their best scores. A Realtime Database-based leaderboard stores every logged-in user's best scores in every game.
 
-##Development Progression
+## Development Progression
 This section visually outlines the progress our team made on MindQuest, starting with a static wireframe and finishing with a functioning Android demo.
 
-### Wireframe
+### Initial Wireframe
 ![image](https://github.com/CS388GROUPTLCN/CS388GROUP/assets/64219376/147557a3-45d6-4117-a027-cea3d086b8d9)
 
 ### Interactive Wireframe
