@@ -1,5 +1,5 @@
 # MindQuest
-### MindQuest is a "human benchmark" Android app, with minigames that test the user's reaction time, memory, and hand-eye coordination. MindQuest uses a FireBase backend, allowing users to securely login via Gmail and dynamically save and store their best scores. A Realtime Database-based leaderboard stores every logged-in user's best scores in every game.
+MindQuest is a "human benchmark" Android app, with minigames that test the user's reaction time, memory, and hand-eye coordination. MindQuest uses a FireBase backend, allowing users to securely login via Gmail and dynamically save and store their best scores. A Realtime Database-based leaderboard stores every logged-in user's best scores in every game.
 
 
 ## Outline
