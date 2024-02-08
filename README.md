@@ -5,18 +5,17 @@
 ## Outline
 
 ### Realtime Database
-![](gifs/database.gif)
+![](gifs/database.gif)  
+
 MindQuest uses FireBase's Realtime Database implementation to dynamically save and display logged-in users' high scores on a leaderboard.
 
 ### Google Login
-![](gifs/login.gif)
+![](gifs/login.gif)  
 
-MindQuest uses FireBase's Google Authentication API, allowing users to login with their Gmail account and save their scores.
-
-
+MindQuest uses FireBase's Google Authentication API, allowing users to login with their Gmail account and save their scores.  
 
 ### Reflex Game
-![](gifs/reflexgame.gif)
+![](gifs/reflexgame.gif)  
 
 This is the simplest game. It prompts the user to tap the screen once the screen turns green. The delay to turn the screen green is a random value, so the user must depend solely on their reaction time to properly react. If the user taps too soon, the delay to turn green resets.
 
